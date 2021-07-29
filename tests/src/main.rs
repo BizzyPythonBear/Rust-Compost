@@ -17,6 +17,9 @@ fn main() {
     arrays();
     print("Hello, World!");
     print("7474");
+    print_10("Michael!");
+    print("Test");
+    print_custom("Print twice", 2);
 }
 
 // Functions
@@ -41,14 +44,37 @@ fn tuple() {
 
 fn arrays() {
     let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    println!("{} is the 2nd entry of a.", a[1])
+    println!("{} is the 2nd entry of a.", a[1]);
+    if a[1] > 3 {
+        print("The order of the array is incorrect...");
+    } else if a[1] == 2 {
+        print("Everything is in the correct order!");
+    } else if a[1] == 1 {
+        print("The second entry is too small!");
+    }
 }
 
 // Custom Print function
 //     Defining the message parameter as a string
 //             |
-//            |
-//           V
+//             |
+//             V
 fn print(mes: &str) {
     println!("{}", mes); // <- Print out the message given in the function parameters.
+}
+
+fn printf(mes2: &str) {
+    print!("{}", mes2);
+}
+
+fn print_10(mes3: &str) {
+    for i in 0..10 {
+        println!("{}", mes3);
+    }
+}
+
+fn print_custom(mes4: &str, fo: i32) {
+    for i in 0..fo {
+        println!("{}", mes4);
+    }
 }

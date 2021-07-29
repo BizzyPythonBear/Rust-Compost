@@ -21,5 +21,4 @@ fn main() {
         Ordering::Greater => println!("Too big!"),
         Ordering::Equal => println!("You're correct!"),
     }
-
 }
